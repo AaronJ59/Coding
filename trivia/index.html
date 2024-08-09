@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            //check answers to questions
+            document.addEventListener('DOMContentLoaded', function() {
+                let wrong_button = document.querySelectorAll('#Venus, #Jupiter')
+                wrong_button.forEach(function(element) {
+                    element.addEventListener('click', function() {
+                        document.getElementById('mc_decision').textContent = 'Incorrect';
+                        element.style.backgroundColor='red';
+                    });
+                });
+            });
+
+            document.addEventListener('DOMContentLoaded', function() {
+                let right_button = document.querySelector('#Mars')
+                right_button.addEventListener('click', function() {
+                    document.getElementById('mc_decision').textContent = 'Correct!';
+                    right_button.style.backgroundColor = 'green';
+                });
+            });
+
+            document.addEventListener('DOMContentLoaded', function() {
+                let frq_box = document.querySelector('#frq_answer')
+                document.querySelector('form').addEventListener('submit', function(e) {
+                    if (document.querySelector('#frq_answer').value == '1904')
+                    {
+                        e.preventDefault();
+                        document.getElementById('frq_decision').textContent = 'Correct!';
+                        frq_box.style.backgroundColor = 'green';
+                    }
+                    if (document.querySelector('#frq_answer').value != '1904')
+                    {
+                        e.preventDefault();
+                        document.getElementById('frq_decision').textContent = 'Incorrect';
+                        frq_box.style.backgroundColor = 'red';
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>Which planet is known as the "Red Planet"?</h3>
+                <h4 id="mc_decision"></h4>
+                <button id="Venus">Venus</button>
+                <button id="Mars">Mars</button>
+                <button id="Jupiter">Jupiter</button>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>What year did the construction of the Panama Canal begin?</h3>
+                <h4 id="frq_decision"></h4>
+                <form>
+                    <input type="text" autocomplete="off" id="frq_answer">
+                    <button>Confirm</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
