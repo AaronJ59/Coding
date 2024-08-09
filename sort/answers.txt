@@ -1,0 +1,18 @@
+sort1 uses: Bubble sort
+
+How do you know?: It takes incredibly long to sort a reversed50000.txt.
+                  It's using the upper bound of O(n^2), which is the longest.
+                  A reversed set of ordered numbers is the worst case scenario for bubble sort.
+
+sort2 uses: Merge sort
+
+How do you know?: Seems to be fast in all the txt files. This 'sort' file
+                  corresponds to the lower bound and upper bound being
+                  (n log n) which is one of the faster algorithms.
+
+
+sort3 uses: Selection sort
+
+How do you know?: It takes longer than the other 'sort' files. This is the case
+                  for all of the txt files, whether it be sorted, reversed, or random.
+                  Selection Sort has (n^2) as both the upper bound and lower bound and (n^2) is the slowest.

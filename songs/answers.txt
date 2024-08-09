@@ -1,0 +1,5 @@
+Their audio aura is more upbeat/happy and than it is sad or depressing. The listener
+typically enjoys music that has more rhythm.
+
+It might not be very representative of the listener since there are other aspects that
+go towards this song like key, loudness, speechines, and duration_ms.
