@@ -1,0 +1,22 @@
+HTML tags:
+1. head
+2. link
+3. title
+4.header
+5. ul
+6. li
+7. section
+8. div
+9. img
+10. a
+
+CSS properties:
+1. font-family
+2. padding
+3. color
+4. margin-right
+5. font-weight
+
+
+I chose to use Bootstrap to help me create the top part of my page that leads you to other pages,
+and I used Javascript to create a button that leads to a popup.
